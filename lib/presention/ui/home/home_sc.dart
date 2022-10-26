@@ -10,6 +10,12 @@ class HomeSc extends StatefulWidget {
 class _HomeScState extends State<HomeSc> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("HomeSc"),),);
+  print(  ModalRoute.of(context)!.settings.name);
+    return Scaffold(appBar: buildAppBar(),
+    body: Column(children: [
+
+    ],),);
   }
+
+  AppBar buildAppBar() => AppBar(title: Text("HomeSc"),);
 }

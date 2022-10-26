@@ -1,7 +1,6 @@
 import 'package:base_flutter_env/presention/ui/home/home_sc.dart';
-import 'package:base_flutter_env/presention/utils/color_manager.dart';
-import 'package:base_flutter_env/presention/utils/font_manager.dart';
 import 'package:base_flutter_env/presention/utils/navigastion_manager.dart';
+import 'package:base_flutter_env/presention/utils/route_manager.dart';
 import 'package:base_flutter_env/presention/utils/theme_manager.dart';
 import 'package:base_flutter_env/presention/utils/value_manager.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +37,7 @@ class MyApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           theme: ThemeManager.getAppLightTheme(),
           darkTheme: ThemeManager.getAppDarkTheme(),
+          onGenerateRoute: GenerateRoute.getRoutes,
           home: child,
         );
       },
