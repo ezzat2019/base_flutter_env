@@ -13,6 +13,7 @@ class NetworkHelper{
 
   /// urls
   static final POST_GET_ACCESS_TOKEN="rest/oauth2/token";
+  static const POST_LOGIN = "rest/login";
   static var MyHeaders = {'Content-Type': 'application/json-patch+json',"accept": "*/*", "lang": LangManager.getLang()};
   static var MyHeadersFile = {'Content-Type': 'multipart/form-data',"accept": "*/*", "lang": LangManager.getLang(),
   };

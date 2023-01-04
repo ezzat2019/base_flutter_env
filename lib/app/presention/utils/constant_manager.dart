@@ -14,8 +14,8 @@ class ConstantManager{
   static const TOKEN_KEY = "token";
 
   /// open cart key
-  static const CLIENT_ID_VAL = "client_id";
-  static const CLIENT_SECRET_VAL = "client_secret";
+  static const CLIENT_ID_VAL = "shopping_oauth_client";
+  static const CLIENT_SECRET_VAL = "shopping_oauth_secret";
   static const GRANT_TYPE_VAL = "client_credentials";
   static String createAuth(){
     String step1=CLIENT_ID_VAL+":"+CLIENT_SECRET_VAL;

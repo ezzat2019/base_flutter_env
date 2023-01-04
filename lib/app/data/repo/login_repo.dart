@@ -1,4 +1,5 @@
 import 'package:base_flutter_env/app/data/model/access_token/access_token_request.dart';
+import 'package:base_flutter_env/app/data/model/auth/login/login_request.dart';
 import 'package:base_flutter_env/app/data/model/error_model.dart';
 import 'package:base_flutter_env/app/presention/utils/constant_manager.dart';
 import 'package:dio/dio.dart';
@@ -9,16 +10,14 @@ import '../../presention/utils/navigastion_manager.dart';
 import '../../presention/utils/network_helper.dart';
 import '../source/network/network_manager.dart';
 
-class BaseRepo{
+class LoginRepo{
   NetworkManager networkManager=DIManager.getIt.get<NetworkManager>();
-  Future<Response?> getAccessToken()
+  Future<Response?> login(LoginRequest loginRequest)
   async{
-    AccessTokenRequest accessTokenRequest=AccessTokenRequest(oldToken: NetworkHelper.tokken);
-    print("object");
-    NetworkHelper.MyHeaders["Authorization"]=ConstantManager.createAuth();
+
     try {
-      Response? res= await networkManager.dio.post(NetworkHelper.POST_GET_ACCESS_TOKEN+"/${ConstantManager
-      .GRANT_TYPE_VAL}",data: accessTokenRequest.toJson(),options: Options(
+      NetworkHelper.MyHeaders["Authorization"]=NetworkHelper.tokken;
+      Response? res= await networkManager.dio.post(NetworkHelper.POST_LOGIN,data: loginRequest.toJson(),options: Options(
           headers: NetworkHelper.MyHeaders
       ));
 
