@@ -1,3 +1,4 @@
 {
-  "baseEnv": "Base Env"
+  "baseEnv": "Base Env",
+  "errorTryAgainLater": "Error try again later"
 }

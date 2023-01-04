@@ -59,6 +59,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Error try again later`
+  String get errorTryAgainLater {
+    return Intl.message(
+      'Error try again later',
+      name: 'errorTryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "baseEnv": MessageLookupByLibrary.simpleMessage("Base Env")
+        "baseEnv": MessageLookupByLibrary.simpleMessage("Base Env"),
+        "errorTryAgainLater":
+            MessageLookupByLibrary.simpleMessage("Error try again later")
       };
 }

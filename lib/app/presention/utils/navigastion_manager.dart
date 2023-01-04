@@ -15,6 +15,24 @@ class NavigationManager {
         MaterialPageRoute(builder: (context) => screenName,)
     , (route) => false);
   }
+
+  static gotoName(String screenName,{args,BuildContext? context}){
+    if(context!=null)
+      {
+        Navigator.of(context).pushNamed(screenName,arguments: args);
+      }else
+        {
+          Navigator.of(myContext!).pushNamed(screenName,arguments: args);
+        }
+
+  }
+  static gotoAndKillName(String screenName,{args}){
+    Navigator.of(myContext!).pushReplacementNamed(screenName,arguments: args);
+  }
+  static gotoAndKillAllName(String screenName){
+    Navigator.of(myContext!).pushNamedAndRemoveUntil(screenName, (Route<dynamic> route) => false);
+  }
+
   static back({dynamic  res}){
     Navigator.of(myContext!).pop(res);
   }

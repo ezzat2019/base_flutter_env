@@ -8,10 +8,11 @@ import 'lang_manager.dart';
 import 'navigastion_manager.dart';
 
 class NetworkHelper{
-  static final BASE_URL="https://invapi.atc-servers.com/api/";
+  static final BASE_URL="https://api-oauth.opencart-api.com/api/";
 
 
   /// urls
+  static final POST_GET_ACCESS_TOKEN="rest/oauth2/token";
   static var MyHeaders = {'Content-Type': 'application/json-patch+json',"accept": "*/*", "lang": LangManager.getLang()};
   static var MyHeadersFile = {'Content-Type': 'multipart/form-data',"accept": "*/*", "lang": LangManager.getLang(),
   };
@@ -28,7 +29,7 @@ class NetworkHelper{
       elevation: 0,
       behavior: SnackBarBehavior.fixed,
       backgroundColor: Colors.transparent,
-      duration: Duration(milliseconds: 1000),
+      duration: Duration(milliseconds: 1500),
       content: AwesomeSnackbarContent(
         title: '',
         message:
