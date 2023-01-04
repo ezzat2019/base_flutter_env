@@ -1,12 +1,13 @@
-import 'package:base_flutter_env/presention/ui/home/home_sc.dart';
-import 'package:base_flutter_env/presention/utils/navigastion_manager.dart';
-import 'package:base_flutter_env/presention/utils/route_manager.dart';
-import 'package:base_flutter_env/presention/utils/theme_manager.dart';
-import 'package:base_flutter_env/presention/utils/value_manager.dart';
+
+import 'package:base_flutter_env/app/presention/utils/value_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'app/presention/ui/home/home_sc.dart';
+import 'app/presention/utils/navigastion_manager.dart';
+import 'app/presention/utils/route_manager.dart';
+import 'app/presention/utils/theme_manager.dart';
 import 'generated/l10n.dart';
 
 void main() {

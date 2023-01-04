@@ -1,5 +1,7 @@
-import 'package:base_flutter_env/presention/ui/home/home_sc.dart';
+
 import 'package:flutter/material.dart';
+
+import '../ui/home/home_sc.dart';
 
 class Routes {
   static const String HOME="/";

@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 GlobalKey<NavigatorState> navK=GlobalKey<NavigatorState>();
-BuildContext? myContext=navK.currentState!.context;
+BuildContext? myContext=navK.currentContext;
 class NavigationManager {
   static goto(dynamic screenName){
     Navigator.of(myContext!).push(MaterialPageRoute(builder: (context) => screenName,));
